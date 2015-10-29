@@ -14,6 +14,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'acts_as_votable', '~> 0.10.0'
 gem 'simple_form'
 gem 'pg',             '0.17.1'
+gem 'puma',           '2.11.1'
 
 
 group :development, :test do
