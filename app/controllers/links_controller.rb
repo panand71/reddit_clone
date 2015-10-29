@@ -10,7 +10,7 @@ class LinksController < ApplicationController
 
   # GET /links/1
   # GET /links/1.json
-  def show
+  def show  
   end
 
   # GET /links/new
@@ -29,7 +29,8 @@ class LinksController < ApplicationController
 
     respond_to do |format|
       if @link.save
-        format.html { redirect_to @link, notice: 'Link was successfully created.' }
+        format.html { redirect_to @link}
+        flash[:notice] = "Your link has been added!"
         format.json { render :show, status: :created, location: @link }
       else
         format.html { render :new }
