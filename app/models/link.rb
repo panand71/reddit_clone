@@ -2,7 +2,7 @@ class Link < ActiveRecord::Base
   belongs_to    :user
   has_many      :comments
   acts_as_votable
-  before_validation :smart_add_url_protocol
+  # before_validation :smart_add_url_protocol
 
 protected
 
