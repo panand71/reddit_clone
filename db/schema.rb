@@ -11,7 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151028235844) do
+ActiveRecord::Schema.define(version: 20151029001726) do
+
+  create_table "comments", force: :cascade do |t|
+    t.integer  "link_id"
+    t.integer  "index"
+    t.text     "body"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "links", force: :cascade do |t|
     t.string   "title"
